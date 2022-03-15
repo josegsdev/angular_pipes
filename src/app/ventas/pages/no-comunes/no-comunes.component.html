@@ -1,0 +1,79 @@
+<hr>
+<h4>Pipes para iterar propiedades de un objeto</h4>
+<ul>
+    <li> <strong>*ngFor="let claveValor of persona1 | keyvalue"</strong> : 
+        claveValor.key: claveValor.value
+        <ul>
+            <li *ngFor="let claveValor of persona1 | keyvalue">
+                {{claveValor.key}}: {{claveValor.value}}
+            </li>
+        </ul>
+    </li>
+</ul>
+<br>
+<hr>
+<h4>Pipes para imprimir un objeto o JSON</h4>
+<ul>
+    <li> <strong>persona1 | json</strong> : 
+        {{persona1 | json}}
+    </li>
+</ul>
+<br>
+<hr>
+<hr>
+<h4>Pipes async</h4>
+<ul>
+    <li> <strong>miObserbable | async</strong> : 
+        {{miObserbable | async}}
+    </li>
+    <li> retardo de 3 segundos como simulacion de respuesta <strong>promesa | async</strong> : 
+        {{promesa | async}}
+    </li>
+</ul>
+<br>
+<hr>
+<h4>Pipes para filtar verbos</h4>
+<ul>
+    <li> <strong>persona1.genero | i18nSelect:invitar</strong> : 
+        Hola {{persona1.nombre}} un gusto  {{persona1.genero | i18nSelect:invitar }} 
+    </li>
+    <li> <strong>persona2.genero | i18nSelect:invitar</strong> : 
+        Hola {{persona2.nombre}} un gusto  {{persona2.genero | i18nSelect:invitar }} 
+    </li>
+</ul>
+<br>
+
+<hr>
+<h4>Pipes para plural/singular</h4>
+<ul>
+    <li> <strong>theGang.length  | i18nPlural:bar</strong> : 
+        {{ theGang.length  | i18nPlural:bar }}
+    </li>
+    <button (click)="quitar()">Quitar</button> | 
+    <button (click)="reset()">Reset</button>
+</ul>
+<br>
+<hr>
+<h4>Pipes para cortar</h4>
+<p>this.theGang=['charlie','mac','dennis','frank reynolds','sweet dee']</p>
+<ul>
+    <li>En array:  <strong>theGang | slice:0:1</strong> : 
+        {{ theGang | slice:0:1}}
+    </li>
+    <li>En array:  <strong>theGang | slice:0:2</strong> : 
+        {{ theGang | slice:0:2}}
+    </li>
+    <li>En array: <strong>theGang | slice:0:3</strong> : 
+        {{ theGang | slice:0:3}}
+    </li>
+    <li>En array: <strong>theGang | slice:2:3</strong> : 
+        {{ theGang | slice:2:3}}
+    </li>    
+    <li>En texto: <strong>theGang[3] | slice:2:9</strong> : 
+        {{ theGang[3] | slice:2:9}}
+    </li> 
+    <li>En texto: <strong>theGang[3] | slice:0:7</strong> : 
+        {{ theGang[3] | slice:0:7}}
+    </li> 
+</ul>
+<br>

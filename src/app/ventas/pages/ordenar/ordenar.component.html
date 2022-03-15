@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><a href="javascript:;" (click)="ordenaPor('nombre')">Nombre</a></th>
+            <th><a href="javascript:;" (click)="ordenaPor('vuela')">Vuela</a></th>
+            <th><a href="javascript:;" (click)="ordenaPor('alterego')">Alterego</a></th>
+            <th><a href="javascript:;" (click)="ordenaPor('poder')">Poder</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let h of heroes | ordenar:ordenarPor">
+            <td>{{h.nombre}}</td>
+            <td>{{h.vuela}}</td>
+            <td>{{h.alterego}}</td>
+            <td>{{h.poder}}</td>
+        </tr>
+    </tbody>
+</table>

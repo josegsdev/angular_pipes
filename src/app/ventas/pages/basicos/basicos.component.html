@@ -1,0 +1,25 @@
+<hr>
+<h4>Pipes para texto</h4>
+<input type="text" style="padding: 5px;width: 400px;" name="frase" [value]="frase" [(ngModel)]="frase">
+<h4></h4>
+<ul>
+    <li> <strong>uppercase</strong> : {{frase | uppercase}}</li>
+    <li> <strong>lowercase</strong> : {{frase | lowercase}}</li>
+    <li> <strong>titlecase</strong> : {{frase | titlecase}}</li>
+</ul>
+<br>
+<hr>
+<h4>Pipes para fecha</h4>
+<h4></h4>
+<ul>
+    <li> <strong>fecha | date</strong> : {{ fecha | date }}</li>
+    <li> <strong>fecha | date: 'longDate'</strong> : {{ fecha | date: 'longDate' }}</li>
+    <li> <strong>fecha | date: 'short'</strong> : {{ fecha | date: 'short' }}</li>
+    <li> <strong>fecha | date: 'fullTime'</strong> : {{ fecha | date: 'fullTime' }}</li>
+    <li><hr></li>
+    <li> <strong>fecha | date: 'long'</strong> : {{ fecha | date: 'long' }}</li>
+    <li> <strong>fecha | date: 'long':'GMT-6</strong> : {{ fecha | date: 'long':'GMT-6' }}</li>
+    <li> <strong>fecha | date: 'long':'GMT-6</strong> : {{ fecha | date: 'long':'GMT-6':'en' }}</li>
+    <li> <strong>fecha | date: 'long':'GMT-6</strong> : {{ fecha | date: 'long':'GMT-6':'fr' }}</li>
+</ul>
+<br>

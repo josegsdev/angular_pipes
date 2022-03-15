@@ -1,0 +1,35 @@
+<hr>
+<h4>Pipes para numeros</h4>
+<input type="text" style="padding: 5px;width: 400px;" name="numero" [value]="numero" [(ngModel)]="numero">
+<h4></h4>
+<ul>
+    <li> <strong>numero | number:'1.2'</strong> : {{numero | number:'1.2'}}</li>
+    <li> <strong>numero | number:'1.2-5'</strong> : {{numero | number:'1.2-5'}}</li>
+    <li> <strong>numero | number:'1.1-10'</strong> : {{numero | number:'1.1-10'}}</li>
+    <li> <strong>numero | number:'2.1-10'</strong> : {{numero | number:'2.1-10'}}</li>
+    <li> <strong>numero | number:'3.5-5'</strong> : {{numero | number:'3.5-5'}}</li>
+    <li> <strong>numero | number:'1.5-5':'fr'</strong> : {{numero | number:'1.5-5':'fr'}}</li>
+</ul>
+<br>
+<hr>
+<h4>Pipes para modedas</h4>
+<input type="text" style="padding: 5px;width: 400px;" name="cur" [value]="cur" [(ngModel)]="cur">
+<h4></h4>
+<ul>
+    <li> <strong>cur | currency:'CLP':'symbol-narrow'</strong> : {{cur | currency:'CLP':'symbol-narrow'}}</li>
+    <li> <strong>cur | currency</strong> : {{cur | currency}}</li>
+    <li> <strong>cur | currency:'EUR'</strong> : {{cur | currency:'EUR'}}</li>
+    <li> <strong>cur | currency:'EUR':'symbol-narrow'</strong> : {{cur | currency:'EUR':'symbol-narrow'}}</li>
+</ul>
+<br>
+<hr>
+<h4>Pipes para porcentajes</h4>
+<input type="text" style="padding: 5px;width: 400px;" name="percent" [value]="percent" [(ngModel)]="percent">
+<h4></h4>
+<ul>
+    <li> <strong>percent | percent:'1.2'</strong> : {{percent | percent:'1.2'}}</li>
+    <li> <strong>percent | percent:'1.2-10'</strong> : {{percent | percent:'1.2-10'}}</li>
+    <li> <strong>percent | percent:'2.2'</strong> : {{percent | percent:'2.2'}}</li>
+    <li> <strong>percent | percent:'2.'</strong> : {{percent | percent:'2.'}}</li>
+</ul>
+<br>
